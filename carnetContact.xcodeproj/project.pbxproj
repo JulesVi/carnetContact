@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FEC32442397052E002E1377 /* AjouterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEC32432397052E002E1377 /* AjouterViewController.swift */; };
 		850E09C923967A91009E8739 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850E09C823967A91009E8739 /* DetailsViewController.swift */; };
 		CB136FFC239641C40030E665 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB136FFB239641C40030E665 /* AppDelegate.swift */; };
 		CB136FFE239641C40030E665 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB136FFD239641C40030E665 /* SceneDelegate.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2FEC32432397052E002E1377 /* AjouterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjouterViewController.swift; sourceTree = "<group>"; };
 		850E09C823967A91009E8739 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		CB136FF8239641C40030E665 /* carnetContact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carnetContact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB136FFB239641C40030E665 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				CB136FFD239641C40030E665 /* SceneDelegate.swift */,
 				CB136FFF239641C40030E665 /* ViewController.swift */,
 				850E09C823967A91009E8739 /* DetailsViewController.swift */,
+				2FEC32432397052E002E1377 /* AjouterViewController.swift */,
 				CB137001239641C40030E665 /* Main.storyboard */,
 				CB137007239641D00030E665 /* Assets.xcassets */,
 				CB137009239641D00030E665 /* LaunchScreen.storyboard */,
@@ -270,6 +273,7 @@
 				CB136FFE239641C40030E665 /* SceneDelegate.swift in Sources */,
 				CB137006239641C40030E665 /* carnetContact.xcdatamodeld in Sources */,
 				850E09C923967A91009E8739 /* DetailsViewController.swift in Sources */,
+				2FEC32442397052E002E1377 /* AjouterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +447,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 699J77A955;
 				INFOPLIST_FILE = carnetContact/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -460,6 +465,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 699J77A955;
 				INFOPLIST_FILE = carnetContact/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

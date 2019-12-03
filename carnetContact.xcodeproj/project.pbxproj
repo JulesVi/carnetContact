@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB136FFC239641C40030E665 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB136FFB239641C40030E665 /* AppDelegate.swift */; };
+		CB136FFE239641C40030E665 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB136FFD239641C40030E665 /* SceneDelegate.swift */; };
+		CB137000239641C40030E665 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB136FFF239641C40030E665 /* ViewController.swift */; };
+		CB137003239641C40030E665 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB137001239641C40030E665 /* Main.storyboard */; };
+		CB137006239641C40030E665 /* carnetContact.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB137004239641C40030E665 /* carnetContact.xcdatamodeld */; };
+		CB137008239641D00030E665 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB137007239641D00030E665 /* Assets.xcassets */; };
+		CB13700B239641D00030E665 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB137009239641D00030E665 /* LaunchScreen.storyboard */; };
+		CB137016239641D10030E665 /* carnetContactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB137015239641D10030E665 /* carnetContactTests.swift */; };
+		CB137021239641D10030E665 /* carnetContactUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB137020239641D10030E665 /* carnetContactUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CB137012239641D00030E665 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB136FF0239641C40030E665 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB136FF7239641C40030E665;
+			remoteInfo = carnetContact;
+		};
+		CB13701D239641D10030E665 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB136FF0239641C40030E665 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB136FF7239641C40030E665;
+			remoteInfo = carnetContact;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CB136FF8239641C40030E665 /* carnetContact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carnetContact.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB136FFB239641C40030E665 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CB136FFD239641C40030E665 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CB136FFF239641C40030E665 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CB137002239641C40030E665 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CB137005239641C40030E665 /* carnetContact.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = carnetContact.xcdatamodel; sourceTree = "<group>"; };
+		CB137007239641D00030E665 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CB13700A239641D00030E665 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CB13700C239641D00030E665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB137011239641D00030E665 /* carnetContactTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = carnetContactTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB137015239641D10030E665 /* carnetContactTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carnetContactTests.swift; sourceTree = "<group>"; };
+		CB137017239641D10030E665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB13701C239641D10030E665 /* carnetContactUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = carnetContactUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB137020239641D10030E665 /* carnetContactUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carnetContactUITests.swift; sourceTree = "<group>"; };
+		CB137022239641D10030E665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB136FF5239641C40030E665 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB13700E239641D00030E665 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB137019239641D10030E665 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB136FEF239641C40030E665 = {
+			isa = PBXGroup;
+			children = (
+				CB136FFA239641C40030E665 /* carnetContact */,
+				CB137014239641D10030E665 /* carnetContactTests */,
+				CB13701F239641D10030E665 /* carnetContactUITests */,
+				CB136FF9239641C40030E665 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB136FF9239641C40030E665 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB136FF8239641C40030E665 /* carnetContact.app */,
+				CB137011239641D00030E665 /* carnetContactTests.xctest */,
+				CB13701C239641D10030E665 /* carnetContactUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB136FFA239641C40030E665 /* carnetContact */ = {
+			isa = PBXGroup;
+			children = (
+				CB136FFB239641C40030E665 /* AppDelegate.swift */,
+				CB136FFD239641C40030E665 /* SceneDelegate.swift */,
+				CB136FFF239641C40030E665 /* ViewController.swift */,
+				CB137001239641C40030E665 /* Main.storyboard */,
+				CB137007239641D00030E665 /* Assets.xcassets */,
+				CB137009239641D00030E665 /* LaunchScreen.storyboard */,
+				CB13700C239641D00030E665 /* Info.plist */,
+				CB137004239641C40030E665 /* carnetContact.xcdatamodeld */,
+			);
+			path = carnetContact;
+			sourceTree = "<group>";
+		};
+		CB137014239641D10030E665 /* carnetContactTests */ = {
+			isa = PBXGroup;
+			children = (
+				CB137015239641D10030E665 /* carnetContactTests.swift */,
+				CB137017239641D10030E665 /* Info.plist */,
+			);
+			path = carnetContactTests;
+			sourceTree = "<group>";
+		};
+		CB13701F239641D10030E665 /* carnetContactUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CB137020239641D10030E665 /* carnetContactUITests.swift */,
+				CB137022239641D10030E665 /* Info.plist */,
+			);
+			path = carnetContactUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB136FF7239641C40030E665 /* carnetContact */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB137025239641D10030E665 /* Build configuration list for PBXNativeTarget "carnetContact" */;
+			buildPhases = (
+				CB136FF4239641C40030E665 /* Sources */,
+				CB136FF5239641C40030E665 /* Frameworks */,
+				CB136FF6239641C40030E665 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = carnetContact;
+			productName = carnetContact;
+			productReference = CB136FF8239641C40030E665 /* carnetContact.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CB137010239641D00030E665 /* carnetContactTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB137028239641D10030E665 /* Build configuration list for PBXNativeTarget "carnetContactTests" */;
+			buildPhases = (
+				CB13700D239641D00030E665 /* Sources */,
+				CB13700E239641D00030E665 /* Frameworks */,
+				CB13700F239641D00030E665 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB137013239641D00030E665 /* PBXTargetDependency */,
+			);
+			name = carnetContactTests;
+			productName = carnetContactTests;
+			productReference = CB137011239641D00030E665 /* carnetContactTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CB13701B239641D10030E665 /* carnetContactUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB13702B239641D10030E665 /* Build configuration list for PBXNativeTarget "carnetContactUITests" */;
+			buildPhases = (
+				CB137018239641D10030E665 /* Sources */,
+				CB137019239641D10030E665 /* Frameworks */,
+				CB13701A239641D10030E665 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB13701E239641D10030E665 /* PBXTargetDependency */,
+			);
+			name = carnetContactUITests;
+			productName = carnetContactUITests;
+			productReference = CB13701C239641D10030E665 /* carnetContactUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB136FF0239641C40030E665 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "Jules Vial";
+				TargetAttributes = {
+					CB136FF7239641C40030E665 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					CB137010239641D00030E665 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = CB136FF7239641C40030E665;
+					};
+					CB13701B239641D10030E665 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = CB136FF7239641C40030E665;
+					};
+				};
+			};
+			buildConfigurationList = CB136FF3239641C40030E665 /* Build configuration list for PBXProject "carnetContact" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CB136FEF239641C40030E665;
+			productRefGroup = CB136FF9239641C40030E665 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB136FF7239641C40030E665 /* carnetContact */,
+				CB137010239641D00030E665 /* carnetContactTests */,
+				CB13701B239641D10030E665 /* carnetContactUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB136FF6239641C40030E665 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB13700B239641D00030E665 /* LaunchScreen.storyboard in Resources */,
+				CB137008239641D00030E665 /* Assets.xcassets in Resources */,
+				CB137003239641C40030E665 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB13700F239641D00030E665 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB13701A239641D10030E665 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB136FF4239641C40030E665 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB137000239641C40030E665 /* ViewController.swift in Sources */,
+				CB136FFC239641C40030E665 /* AppDelegate.swift in Sources */,
+				CB136FFE239641C40030E665 /* SceneDelegate.swift in Sources */,
+				CB137006239641C40030E665 /* carnetContact.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB13700D239641D00030E665 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB137016239641D10030E665 /* carnetContactTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB137018239641D10030E665 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB137021239641D10030E665 /* carnetContactUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CB137013239641D00030E665 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB136FF7239641C40030E665 /* carnetContact */;
+			targetProxy = CB137012239641D00030E665 /* PBXContainerItemProxy */;
+		};
+		CB13701E239641D10030E665 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB136FF7239641C40030E665 /* carnetContact */;
+			targetProxy = CB13701D239641D10030E665 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CB137001239641C40030E665 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB137002239641C40030E665 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CB137009239641D00030E665 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB13700A239641D00030E665 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB137023239641D10030E665 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CB137024239641D10030E665 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB137026239641D10030E665 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = carnetContact/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = coursIos.carnetContact;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CB137027239641D10030E665 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = carnetContact/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = coursIos.carnetContact;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CB137029239641D10030E665 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = carnetContactTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = coursIos.carnetContactTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/carnetContact.app/carnetContact";
+			};
+			name = Debug;
+		};
+		CB13702A239641D10030E665 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = carnetContactTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = coursIos.carnetContactTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/carnetContact.app/carnetContact";
+			};
+			name = Release;
+		};
+		CB13702C239641D10030E665 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = carnetContactUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = coursIos.carnetContactUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = carnetContact;
+			};
+			name = Debug;
+		};
+		CB13702D239641D10030E665 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = carnetContactUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = coursIos.carnetContactUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = carnetContact;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB136FF3239641C40030E665 /* Build configuration list for PBXProject "carnetContact" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB137023239641D10030E665 /* Debug */,
+				CB137024239641D10030E665 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB137025239641D10030E665 /* Build configuration list for PBXNativeTarget "carnetContact" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB137026239641D10030E665 /* Debug */,
+				CB137027239641D10030E665 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB137028239641D10030E665 /* Build configuration list for PBXNativeTarget "carnetContactTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB137029239641D10030E665 /* Debug */,
+				CB13702A239641D10030E665 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB13702B239641D10030E665 /* Build configuration list for PBXNativeTarget "carnetContactUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB13702C239641D10030E665 /* Debug */,
+				CB13702D239641D10030E665 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CB137004239641C40030E665 /* carnetContact.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CB137005239641C40030E665 /* carnetContact.xcdatamodel */,
+			);
+			currentVersion = CB137005239641C40030E665 /* carnetContact.xcdatamodel */;
+			path = carnetContact.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CB136FF0239641C40030E665 /* Project object */;
+}

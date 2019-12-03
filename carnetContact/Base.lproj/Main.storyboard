@@ -24,6 +24,9 @@
                                 <rect key="frame" x="325" y="30" width="30" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="+"/>
+                                <connections>
+                                    <segue destination="TR4-6X-gEC" kind="show" id="TCq-cF-mUW"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Contacts" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dho-YO-FU1">
                                 <rect key="frame" x="15" y="76" width="150" height="43.5"/>
@@ -111,6 +114,78 @@
             </objects>
             <point key="canvasLocation" x="132" y="138"/>
         </scene>
+        <!--Ajouter View Controller-->
+        <scene sceneID="Kq9-rA-CmU">
+            <objects>
+                <viewController id="TR4-6X-gEC" customClass="AjouterViewController" customModule="carnetContact" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="olf-y4-Nmp" customClass="Ajou">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYW-OL-CPC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Nouveau Contact" id="1ML-qt-zbE">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="Z84-Dj-qJ8">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="b1G-3d-a6f">
+                                                <rect key="frame" x="16" y="13" width="83" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Annuler"/>
+                                                <connections>
+                                                    <action selector="closeAjouter" destination="TR4-6X-gEC" eventType="touchUpInside" id="aAE-Fe-Tr1"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="DTn-1g-vmw">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OsM-L5-YJf">
+                                                <rect key="frame" x="276" y="13" width="83" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Save"/>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tdl-8K-A8W">
+                                <rect key="frame" x="64.5" y="60" width="246" height="177"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="246" id="oJ4-Ve-eaw"/>
+                                    <constraint firstAttribute="height" constant="177" id="rof-NU-wkD"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmG-wx-KlN">
+                                <rect key="frame" x="34" y="245" width="107" height="30"/>
+                                <state key="normal" title="Faire une photo"/>
+                                <connections>
+                                    <action selector="PrendrePhoto:" destination="TR4-6X-gEC" eventType="touchUpInside" id="wXm-d5-CzX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0Y-Mp-zXe">
+                                <rect key="frame" x="263" y="245" width="49" height="30"/>
+                                <state key="normal" title="Galerie"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kmG-wx-KlN" firstAttribute="centerX" secondItem="olf-y4-Nmp" secondAttribute="centerX" constant="-100" id="2WF-3B-cfV"/>
+                            <constraint firstItem="Tdl-8K-A8W" firstAttribute="centerY" secondItem="olf-y4-Nmp" secondAttribute="centerY" constant="-175" id="MNs-X3-GmC"/>
+                            <constraint firstItem="I0Y-Mp-zXe" firstAttribute="centerX" secondItem="olf-y4-Nmp" secondAttribute="centerX" constant="100" id="bnL-RU-HOX"/>
+                            <constraint firstItem="kmG-wx-KlN" firstAttribute="centerY" secondItem="olf-y4-Nmp" secondAttribute="centerY" constant="-63.5" id="dD4-3l-VW7"/>
+                            <constraint firstItem="Tdl-8K-A8W" firstAttribute="centerX" secondItem="olf-y4-Nmp" secondAttribute="centerX" id="tO3-WQ-WdJ"/>
+                            <constraint firstItem="I0Y-Mp-zXe" firstAttribute="centerY" secondItem="olf-y4-Nmp" secondAttribute="centerY" constant="-63.5" id="yzI-Rj-GfR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qkO-0X-OIh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cUq-ch-ICd"/>
+                    <connections>
+                        <outlet property="image" destination="Tdl-8K-A8W" id="SYe-ME-LWA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XMm-Uf-zPV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="941.60000000000002" y="136.28185907046478"/>
+        </scene>
         <!--Details View Controller-->
         <scene sceneID="yi1-6N-m8O">
             <objects>
@@ -137,15 +212,30 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XT8-Bm-tuK">
+                                <rect key="frame" x="16" y="77" width="343" height="147"/>
+                            </imageView>
+                            <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PEREZ TORRES Pedro Miguel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Jr-Ve-0Wm">
+                                <rect key="frame" x="28" y="240.5" width="319" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2Jr-Ve-0Wm" firstAttribute="centerY" secondItem="Mwt-Og-H9O" secondAttribute="centerY" constant="-68" id="M3a-1x-hhP"/>
+                            <constraint firstItem="XT8-Bm-tuK" firstAttribute="centerY" secondItem="Mwt-Og-H9O" secondAttribute="centerY" constant="-173" id="cLf-s4-AXQ"/>
+                            <constraint firstItem="XT8-Bm-tuK" firstAttribute="centerX" secondItem="Mwt-Og-H9O" secondAttribute="centerX" id="gZi-Ie-Aat"/>
+                            <constraint firstItem="2Jr-Ve-0Wm" firstAttribute="centerX" secondItem="Mwt-Og-H9O" secondAttribute="centerX" id="phz-vN-itR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ajo-9q-WXx"/>
                     </view>
                     <navigationItem key="navigationItem" id="qWO-HL-pg6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lk7-dc-x0K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="826" y="137"/>
+            <point key="canvasLocation" x="132" y="806.44677661169419"/>
         </scene>
     </scenes>
 </document>

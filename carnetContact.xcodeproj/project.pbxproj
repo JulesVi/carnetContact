@@ -3,12 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22050A3EFED31F1741692A9C /* Pods_carnetContact_carnetContactUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C179CD757BB7AA8588173490 /* Pods_carnetContact_carnetContactUITests.framework */; };
 		2FEC32442397052E002E1377 /* AjouterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEC32432397052E002E1377 /* AjouterViewController.swift */; };
 		850E09C923967A91009E8739 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850E09C823967A91009E8739 /* DetailsViewController.swift */; };
+		857AB3C1239E54C300E3C03A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 857AB3C0239E54C200E3C03A /* GoogleService-Info.plist */; };
+		974C06C52D350C1CE268CA40 /* Pods_carnetContact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38882E5ECDE717E64937DCE0 /* Pods_carnetContact.framework */; };
 		CB136FFC239641C40030E665 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB136FFB239641C40030E665 /* AppDelegate.swift */; };
 		CB136FFE239641C40030E665 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB136FFD239641C40030E665 /* SceneDelegate.swift */; };
 		CB137000239641C40030E665 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB136FFF239641C40030E665 /* ViewController.swift */; };
@@ -18,6 +21,7 @@
 		CB13700B239641D00030E665 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB137009239641D00030E665 /* LaunchScreen.storyboard */; };
 		CB137016239641D10030E665 /* carnetContactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB137015239641D10030E665 /* carnetContactTests.swift */; };
 		CB137021239641D10030E665 /* carnetContactUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB137020239641D10030E665 /* carnetContactUITests.swift */; };
+		D400FE08D81C85635CB1D7EC /* Pods_carnetContactTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE37DF9415D1CA1E1B736E97 /* Pods_carnetContactTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +42,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22ED8F297C7931B9F31B1FD6 /* Pods-carnetContact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carnetContact.release.xcconfig"; path = "Target Support Files/Pods-carnetContact/Pods-carnetContact.release.xcconfig"; sourceTree = "<group>"; };
+		26888598F6F045718126683D /* Pods-carnetContact-carnetContactUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carnetContact-carnetContactUITests.release.xcconfig"; path = "Target Support Files/Pods-carnetContact-carnetContactUITests/Pods-carnetContact-carnetContactUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2FEC32432397052E002E1377 /* AjouterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjouterViewController.swift; sourceTree = "<group>"; };
+		38882E5ECDE717E64937DCE0 /* Pods_carnetContact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carnetContact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B3CEEBACF034EF6220FB246 /* Pods-carnetContactTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carnetContactTests.debug.xcconfig"; path = "Target Support Files/Pods-carnetContactTests/Pods-carnetContactTests.debug.xcconfig"; sourceTree = "<group>"; };
+		45F3FB92FA41A1F1A4168CEC /* Pods-carnetContact-carnetContactUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carnetContact-carnetContactUITests.debug.xcconfig"; path = "Target Support Files/Pods-carnetContact-carnetContactUITests/Pods-carnetContact-carnetContactUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		850E09C823967A91009E8739 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		857AB3C0239E54C200E3C03A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C179CD757BB7AA8588173490 /* Pods_carnetContact_carnetContactUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carnetContact_carnetContactUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7203396DBB10A1B3AA83B67 /* Pods-carnetContactTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carnetContactTests.release.xcconfig"; path = "Target Support Files/Pods-carnetContactTests/Pods-carnetContactTests.release.xcconfig"; sourceTree = "<group>"; };
 		CB136FF8239641C40030E665 /* carnetContact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carnetContact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB136FFB239641C40030E665 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB136FFD239641C40030E665 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +67,8 @@
 		CB13701C239641D10030E665 /* carnetContactUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = carnetContactUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB137020239641D10030E665 /* carnetContactUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carnetContactUITests.swift; sourceTree = "<group>"; };
 		CB137022239641D10030E665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE37DF9415D1CA1E1B736E97 /* Pods_carnetContactTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carnetContactTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2CCB24140F68C878880157C /* Pods-carnetContact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carnetContact.debug.xcconfig"; path = "Target Support Files/Pods-carnetContact/Pods-carnetContact.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				974C06C52D350C1CE268CA40 /* Pods_carnetContact.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D400FE08D81C85635CB1D7EC /* Pods_carnetContactTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +92,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22050A3EFED31F1741692A9C /* Pods_carnetContact_carnetContactUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BA44EC73FB54B3C220DA7F4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F2CCB24140F68C878880157C /* Pods-carnetContact.debug.xcconfig */,
+				22ED8F297C7931B9F31B1FD6 /* Pods-carnetContact.release.xcconfig */,
+				45F3FB92FA41A1F1A4168CEC /* Pods-carnetContact-carnetContactUITests.debug.xcconfig */,
+				26888598F6F045718126683D /* Pods-carnetContact-carnetContactUITests.release.xcconfig */,
+				3B3CEEBACF034EF6220FB246 /* Pods-carnetContactTests.debug.xcconfig */,
+				C7203396DBB10A1B3AA83B67 /* Pods-carnetContactTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9733A3F812EED349EECB2153 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38882E5ECDE717E64937DCE0 /* Pods_carnetContact.framework */,
+				C179CD757BB7AA8588173490 /* Pods_carnetContact_carnetContactUITests.framework */,
+				EE37DF9415D1CA1E1B736E97 /* Pods_carnetContactTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CB136FEF239641C40030E665 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +129,8 @@
 				CB137014239641D10030E665 /* carnetContactTests */,
 				CB13701F239641D10030E665 /* carnetContactUITests */,
 				CB136FF9239641C40030E665 /* Products */,
+				1BA44EC73FB54B3C220DA7F4 /* Pods */,
+				9733A3F812EED349EECB2153 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +155,7 @@
 				CB137001239641C40030E665 /* Main.storyboard */,
 				CB137007239641D00030E665 /* Assets.xcassets */,
 				CB137009239641D00030E665 /* LaunchScreen.storyboard */,
+				857AB3C0239E54C200E3C03A /* GoogleService-Info.plist */,
 				CB13700C239641D00030E665 /* Info.plist */,
 				CB137004239641C40030E665 /* carnetContact.xcdatamodeld */,
 			);
@@ -144,9 +187,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB137025239641D10030E665 /* Build configuration list for PBXNativeTarget "carnetContact" */;
 			buildPhases = (
+				CB6C688E0E0779291A841ABB /* [CP] Check Pods Manifest.lock */,
 				CB136FF4239641C40030E665 /* Sources */,
 				CB136FF5239641C40030E665 /* Frameworks */,
 				CB136FF6239641C40030E665 /* Resources */,
+				9012D519D33B17E599166A12 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,6 +206,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB137028239641D10030E665 /* Build configuration list for PBXNativeTarget "carnetContactTests" */;
 			buildPhases = (
+				3225B5D673701B9CA805B4F9 /* [CP] Check Pods Manifest.lock */,
 				CB13700D239641D00030E665 /* Sources */,
 				CB13700E239641D00030E665 /* Frameworks */,
 				CB13700F239641D00030E665 /* Resources */,
@@ -179,9 +225,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB13702B239641D10030E665 /* Build configuration list for PBXNativeTarget "carnetContactUITests" */;
 			buildPhases = (
+				73B59FE4ABF5474651630246 /* [CP] Check Pods Manifest.lock */,
 				CB137018239641D10030E665 /* Sources */,
 				CB137019239641D10030E665 /* Frameworks */,
 				CB13701A239641D10030E665 /* Resources */,
+				D43444319462C77352FE81B7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -242,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB13700B239641D00030E665 /* LaunchScreen.storyboard in Resources */,
+				857AB3C1239E54C300E3C03A /* GoogleService-Info.plist in Resources */,
 				CB137008239641D00030E665 /* Assets.xcassets in Resources */,
 				CB137003239641C40030E665 /* Main.storyboard in Resources */,
 			);
@@ -262,6 +311,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3225B5D673701B9CA805B4F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-carnetContactTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73B59FE4ABF5474651630246 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-carnetContact-carnetContactUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9012D519D33B17E599166A12 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-carnetContact/Pods-carnetContact-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-carnetContact/Pods-carnetContact-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-carnetContact/Pods-carnetContact-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB6C688E0E0779291A841ABB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-carnetContact-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D43444319462C77352FE81B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-carnetContact-carnetContactUITests/Pods-carnetContact-carnetContactUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-carnetContact-carnetContactUITests/Pods-carnetContact-carnetContactUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-carnetContact-carnetContactUITests/Pods-carnetContact-carnetContactUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CB136FF4239641C40030E665 /* Sources */ = {
@@ -444,6 +596,7 @@
 		};
 		CB137026239641D10030E665 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2CCB24140F68C878880157C /* Pods-carnetContact.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -462,6 +615,7 @@
 		};
 		CB137027239641D10030E665 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22ED8F297C7931B9F31B1FD6 /* Pods-carnetContact.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -480,6 +634,7 @@
 		};
 		CB137029239641D10030E665 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B3CEEBACF034EF6220FB246 /* Pods-carnetContactTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -501,6 +656,7 @@
 		};
 		CB13702A239641D10030E665 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7203396DBB10A1B3AA83B67 /* Pods-carnetContactTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -522,6 +678,7 @@
 		};
 		CB13702C239641D10030E665 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45F3FB92FA41A1F1A4168CEC /* Pods-carnetContact-carnetContactUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -541,6 +698,7 @@
 		};
 		CB13702D239641D10030E665 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26888598F6F045718126683D /* Pods-carnetContact-carnetContactUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

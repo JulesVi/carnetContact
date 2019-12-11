@@ -45,17 +45,14 @@ class AjouterViewController: UIViewController, UIImagePickerControllerDelegate, 
     newContact.setValue(Date(), forKey: "date_registre")
     newContact.setValue(photo, forKey: "photo")
     print("\(String(describing: photo))")
-    do{
-        try context.save()
-        print("Operation succesful")
-         self.dismiss(animated: true, completion: nil)
-    } catch {
-        print ("Operation failed")
+        do{
+            try context.save()
+            print("Operation succesful")
+            self.dismiss(animated: true, completion: nil)
+        } catch {
+            print ("Operation failed")
+        }
     }
-    
-    
-    }
-    
     
     let imagePicker: UIImagePickerController = UIImagePickerController()
     @IBAction func closeAjouter(){
@@ -64,6 +61,7 @@ class AjouterViewController: UIViewController, UIImagePickerControllerDelegate, 
 
     @IBOutlet weak var Relationfamilial: UITextField!
     @IBOutlet weak var SelectRelation: UIPickerView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -166,14 +164,4 @@ class AjouterViewController: UIViewController, UIImagePickerControllerDelegate, 
         }
         imagePicker.dismiss(animated: true, completion: nil)
     }
-    
-    
-    
-    
-    
-    
-   
-    
-    
-    
 }

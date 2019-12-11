@@ -34,7 +34,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         ContactService.shared.sort(type: "nom")
+        loadDatas()
         
+    }
+    
+    func loadDatas() {
         self.sections = []
           let appDelegate = UIApplication.shared.delegate as! AppDelegate
           let context = appDelegate.persistentContainer.viewContext
@@ -74,11 +78,12 @@ class ViewController: UIViewController {
                 self.sections.append(String(describing: contact.nom.first))
             }
         }
+        
+        tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tableView.reloadData()
     }
     
     // gestion du type de tri en fonction du segmented control
@@ -216,13 +221,17 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         detailsViewController.user = filteredContact[letter]![indexPath.row]
         self.present(detailsViewController, animated: true, completion:nil)
     }
-    
 }
 extension ViewController: UITabBarDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            ContactService.shared.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .automatic)
+            // TODO : a corriger, pas de supression dans la base
+            if (segmented.selectedSegmentIndex != 2) {
+                // TODO : gerer supression
+            } else {
+                ContactService.shared.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+            }
         }
     }
 }

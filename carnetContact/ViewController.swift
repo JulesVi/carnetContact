@@ -34,27 +34,27 @@ class ViewController: UIViewController {
         let test4 = Contact(nom: "Cesar", prenom: "Jules")
         let test5 = Contact(nom: "Bonnaire", prenom: "Jules")
         let test6 = Contact(nom: "Pinot", prenom: "Thibaut")
-       let test7 = Contact(nom: "Alaphilippe michel jean", prenom: "Julian claude robert enguerrand jackie")
-       let test8 = Contact(nom: "Froome", prenom: "Christopher")
-       let test9 = Contact(nom: "Bardet", prenom: "Romain")
-       let test10 = Contact(nom: "Polidor", prenom: "Raymond")
+        let test7 = Contact(nom: "Alaphilippe michel jean", prenom: "Julian claude robert enguerrand jackie")
+        let test8 = Contact(nom: "Froome", prenom: "Christopher")
+        let test9 = Contact(nom: "Bardet", prenom: "Romain")
+        let test10 = Contact(nom: "Poulidor", prenom: "Raymond")
         let test11 = Contact(nom: "Mercxk", prenom: "Eddy")
-      let test12 = Contact(nom: "Bernal", prenom: "Egan")
-       let test13 = Contact(nom: "Kristof", prenom: "Alexander")
+        let test12 = Contact(nom: "Bernal", prenom: "Egan")
+        let test13 = Contact(nom: "Kristof", prenom: "Alexander")
         ContactService.shared.add(contact: test)
         ContactService.shared.add(contact: test1)
         ContactService.shared.add(contact: test2)
         ContactService.shared.add(contact: test3)
         ContactService.shared.add(contact: test4)
         ContactService.shared.add(contact: test5)
-       ContactService.shared.add(contact: test6)
-       ContactService.shared.add(contact: test7)
-      ContactService.shared.add(contact: test8)
-       ContactService.shared.add(contact: test9)
+        ContactService.shared.add(contact: test6)
+        ContactService.shared.add(contact: test7)
+        ContactService.shared.add(contact: test8)
+        ContactService.shared.add(contact: test9)
         ContactService.shared.add(contact: test10)
-       ContactService.shared.add(contact: test11)
+        ContactService.shared.add(contact: test11)
         ContactService.shared.add(contact: test12)
-       ContactService.shared.add(contact: test13)
+        ContactService.shared.add(contact: test13)
         ContactService.shared.sort(type: "nom")
     }
     
@@ -120,7 +120,7 @@ class ContactService {
 }
 
 // pour gerer le remplissage de la liste
-extension ViewController: UITableViewDataSource {
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -138,8 +138,18 @@ extension ViewController: UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView,
+                   didSelectRowAt indexPath: IndexPath) {
+        print("ca affiche le contact")
+        print(ContactService.shared.contacts[indexPath.row])
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailsViewController = storyboard.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
+        detailsViewController.user = ContactService.shared.contacts[indexPath.row]
+        self.present(detailsViewController, animated: true, completion:nil)
+    }
+    
 }
-
 extension ViewController: UITabBarDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {

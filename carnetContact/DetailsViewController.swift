@@ -10,11 +10,23 @@ import UIKit
 
 class DetailsViewController: UIViewController {
 
+    @IBOutlet weak var nomUser: UILabel!
+    @IBOutlet weak var imgUser: UIImageView!
+    var user: Contact!
+    
     @IBAction func closeAction() {
         self.dismiss(animated: true, completion: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        nomUser.text = "" + user.prenom + " " + user.nom
+        
+        // pour image profil
+        imgUser.layer.borderWidth = 1
+        imgUser.layer.masksToBounds = false
+        imgUser.layer.borderColor = UIColor.black.cgColor
+        imgUser.layer.cornerRadius = imgUser.frame.height/2
+        imgUser.clipsToBounds = true
 
         // Do any additional setup after loading the view.
     }

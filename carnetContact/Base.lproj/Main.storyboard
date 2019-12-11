@@ -206,13 +206,19 @@
                                                 <rect key="frame" x="276" y="13" width="83" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Save"/>
+                                                <connections>
+                                                    <action selector="SaveContact:" destination="j36-Zq-8MD" eventType="touchUpInside" id="o9r-cY-Pct"/>
+                                                </connections>
                                             </button>
+                                            <connections>
+                                                <action selector="SaveContact:" destination="j36-Zq-8MD" id="ZTu-Sd-Unx"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UD9-pk-BhG">
-                                <rect key="frame" x="16" y="52" width="343" height="141"/>
+                                <rect key="frame" x="16" y="52" width="343" height="140"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9IC-yf-TKt">
@@ -368,13 +374,21 @@
                     </view>
                     <navigationItem key="navigationItem" id="uWF-J3-F7V"/>
                     <connections>
+                        <outlet property="Group" destination="eoR-WG-Smn" id="Sbb-A2-jKm"/>
                         <outlet property="InputFamil" destination="ksx-XB-Tkd" id="0Dw-0F-boJ"/>
                         <outlet property="InputGroup" destination="eoR-WG-Smn" id="ptR-yX-Xle"/>
+                        <outlet property="Mail" destination="9pZ-eW-7gX" id="KkB-5c-pCA"/>
+                        <outlet property="Nom" destination="sF1-qp-iD3" id="kfN-O2-Cmo"/>
+                        <outlet property="Numero" destination="vtv-2A-lBa" id="wf7-Um-gd2"/>
+                        <outlet property="Prenom" destination="d0Z-yX-rFp" id="dCd-dv-BQu"/>
+                        <outlet property="Relation" destination="ksx-XB-Tkd" id="2rT-G0-NOV"/>
                         <outlet property="Relationfamilial" destination="ksx-XB-Tkd" id="GRv-h1-uc0"/>
                         <outlet property="SelectRelation" destination="dOe-hj-MNL" id="Hbj-gc-w85"/>
                         <outlet property="image" destination="UD9-pk-BhG" id="pe0-6F-8hc"/>
+                        <outlet property="nom" destination="sF1-qp-iD3" id="X5G-It-PFM"/>
                         <outlet property="picker" destination="dOe-hj-MNL" id="hqe-5p-fua"/>
                         <outlet property="pickerGroup" destination="Dgp-Bl-Ug4" id="psB-kh-njG"/>
+                        <outlet property="prenom" destination="d0Z-yX-rFp" id="xxd-hG-6Hw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6SR-bk-BD5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

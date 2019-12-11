@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AjouterViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
  
@@ -18,6 +19,43 @@ class AjouterViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var pickerGroup: UIPickerView!
     @IBOutlet weak var InputGroup: UITextField!
+    
+    
+    
+    @IBOutlet weak var Nom: UITextField!
+    
+    @IBOutlet weak var Numero: UITextField!
+    @IBOutlet weak var Prenom: UITextField!
+    @IBOutlet weak var Mail: UITextField!
+    @IBOutlet weak var Relation: UITextField!
+    @IBOutlet weak var Group: UITextField!
+    
+    
+
+    
+  @IBAction func SaveContact(_ sender: UIButton) {
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let context = appDelegate.persistentContainer.viewContext
+    
+    let newContact = NSEntityDescription.insertNewObject(forEntityName: "Contacts", into: context)
+    newContact.setValue(Nom.text, forKey: "nom")
+    newContact.setValue(Prenom.text, forKey: "prenom")
+    newContact.setValue(Numero.text, forKey: "numero")
+    newContact.setValue(Mail.text, forKey: "mail")
+    newContact.setValue(Relation.text, forKey: "relation")
+    newContact.setValue(Group.text, forKey: "group")
+    newContact.setValue(Date(), forKey: "date_registre")
+    
+    do{
+        try context.save()
+        print("Operation succesful")
+    } catch {
+        print ("Operation failed")
+    }
+    
+    
+    }
+    
     
     let imagePicker: UIImagePickerController = UIImagePickerController()
     @IBAction func closeAjouter(){

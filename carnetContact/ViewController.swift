@@ -29,6 +29,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+
         
 
           let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -62,7 +63,8 @@ class ViewController: UIViewController {
  
        
         
-        ContactService.shared.sort(type: "nom")
+
+   
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -127,7 +129,7 @@ class ContactService {
 }
 
 // pour gerer le remplissage de la liste
-extension ViewController: UITableViewDataSource {
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -145,8 +147,18 @@ extension ViewController: UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView,
+                   didSelectRowAt indexPath: IndexPath) {
+        print("ca affiche le contact")
+        print(ContactService.shared.contacts[indexPath.row])
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailsViewController = storyboard.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
+        detailsViewController.user = ContactService.shared.contacts[indexPath.row]
+        self.present(detailsViewController, animated: true, completion:nil)
+    }
+    
 }
-
 extension ViewController: UITabBarDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {

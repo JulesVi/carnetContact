@@ -21,7 +21,7 @@
 		CB13700B239641D00030E665 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB137009239641D00030E665 /* LaunchScreen.storyboard */; };
 		CB137016239641D10030E665 /* carnetContactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB137015239641D10030E665 /* carnetContactTests.swift */; };
 		CB137021239641D10030E665 /* carnetContactUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB137020239641D10030E665 /* carnetContactUITests.swift */; };
-		D400FE08D81C85635CB1D7EC /* Pods_carnetContactTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE37DF9415D1CA1E1B736E97 /* Pods_carnetContactTests.framework */; };
+		CBC7B4EB239E620D00B3C092 /* IMG_20191116_133850.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CBC7B4EA239E620C00B3C092 /* IMG_20191116_133850.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +155,7 @@
 				CB137001239641C40030E665 /* Main.storyboard */,
 				CB137007239641D00030E665 /* Assets.xcassets */,
 				CB137009239641D00030E665 /* LaunchScreen.storyboard */,
+				CBC7B4EA239E620C00B3C092 /* IMG_20191116_133850.jpg */,
 				857AB3C0239E54C200E3C03A /* GoogleService-Info.plist */,
 				CB13700C239641D00030E665 /* Info.plist */,
 				CB137004239641C40030E665 /* carnetContact.xcdatamodeld */,
@@ -292,6 +293,7 @@
 				CB13700B239641D00030E665 /* LaunchScreen.storyboard in Resources */,
 				857AB3C1239E54C300E3C03A /* GoogleService-Info.plist in Resources */,
 				CB137008239641D00030E665 /* Assets.xcassets in Resources */,
+				CBC7B4EB239E620D00B3C092 /* IMG_20191116_133850.jpg in Resources */,
 				CB137003239641C40030E665 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

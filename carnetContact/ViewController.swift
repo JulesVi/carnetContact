@@ -26,12 +26,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmented: UISegmentedControl!
     
+    var sections = [String]()
+    
+    var filteredContact = [String: [Contact]]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-
+        ContactService.shared.sort(type: "nom")
         
-
+        self.sections = []
           let appDelegate = UIApplication.shared.delegate as! AppDelegate
           let context = appDelegate.persistentContainer.viewContext
           let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Contacts")
@@ -59,12 +63,17 @@ class ViewController: UIViewController {
             
         }
         
-        
- 
-       
-        
-
-   
+        for contact in ContactService.shared.contacts {
+            let firstLetter = String(describing: contact.nom.first)
+            if filteredContact[firstLetter] != nil {
+                filteredContact[firstLetter]!.append(contact)
+            } else {
+                filteredContact[firstLetter] = [contact]
+            }
+            if (!self.sections.contains(String(describing: contact.nom.first))) {
+                self.sections.append(String(describing: contact.nom.first))
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -77,8 +86,34 @@ class ViewController: UIViewController {
         switch segmented.selectedSegmentIndex {
         case 0:
             ContactService.shared.sort(type: "nom")
+            self.sections = []
+            self.filteredContact = [String: [Contact]]()
+            for contact in ContactService.shared.contacts {
+                let firstLetter = String(describing: contact.nom.first)
+                if filteredContact[firstLetter] != nil {
+                    filteredContact[firstLetter]!.append(contact)
+                } else {
+                    filteredContact[firstLetter] = [contact]
+                }
+                if (!self.sections.contains(String(describing: contact.nom.first))) {
+                    self.sections.append(String(describing: contact.nom.first))
+                }
+            }
         case 1:
             ContactService.shared.sort(type: "prenom")
+            self.sections = []
+            self.filteredContact = [String: [Contact]]()
+            for contact in ContactService.shared.contacts {
+                let firstLetter = String(describing: contact.prenom.first)
+                if filteredContact[firstLetter] != nil {
+                    filteredContact[firstLetter]!.append(contact)
+                } else {
+                    filteredContact[firstLetter] = [contact]
+                }
+                if (!self.sections.contains(String(describing: contact.prenom.first))) {
+                    self.sections.append(String(describing: contact.prenom.first))
+                }
+            }
         case 2:
             ContactService.shared.sort(type: "date")
         default:
@@ -131,30 +166,54 @@ class ContactService {
 // pour gerer le remplissage de la liste
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        if (segmented.selectedSegmentIndex != 2) {
+            return self.sections.count
+        } else {
+            return 1
+        }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if (segmented.selectedSegmentIndex != 2) {
+            return self.sections[section]
+        } else {
+            return nil
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ContactService.shared.contacts.count
+        if (segmented.selectedSegmentIndex != 2) {
+            let letter = self.sections[section]
+            return filteredContact[letter]!.count
+        } else {
+            return ContactService.shared.contacts.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TestCell", for: indexPath)
-        let contact = ContactService.shared.contacts[indexPath.row]
+        if (segmented.selectedSegmentIndex != 2) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TestCell", for: indexPath)
+            let letter = self.sections[indexPath.section]
+            cell.textLabel?.text = filteredContact[letter]![indexPath.row].nom
+            cell.detailTextLabel?.text = filteredContact[letter]![indexPath.row].prenom
+            
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TestCell", for: indexPath)
+            cell.textLabel?.text = ContactService.shared.contacts[indexPath.row].nom
+            cell.detailTextLabel?.text = ContactService.shared.contacts[indexPath.row].prenom
+            
+            return cell
+        }
         
-        cell.textLabel?.text = contact.nom
-        cell.detailTextLabel?.text = contact.prenom
-        
-        return cell
     }
     
-    func tableView(_ tableView: UITableView,
-                   didSelectRowAt indexPath: IndexPath) {
-        print("ca affiche le contact")
-        print(ContactService.shared.contacts[indexPath.row])
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let detailsViewController = storyboard.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
-        detailsViewController.user = ContactService.shared.contacts[indexPath.row]
+        let letter = self.sections[indexPath.section]
+        detailsViewController.user = filteredContact[letter]![indexPath.row]
         self.present(detailsViewController, animated: true, completion:nil)
     }
     

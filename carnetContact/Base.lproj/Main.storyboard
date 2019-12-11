@@ -115,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="138"/>
+            <point key="canvasLocation" x="132" y="124"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="yi1-6N-m8O">
@@ -242,7 +242,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Prenom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d0Z-yX-rFp">
                                 <rect key="frame" x="55" y="251" width="304" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="family-name"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Tna-5z-Jrq">
                                 <rect key="frame" x="16" y="257.5" width="20" height="19"/>
@@ -250,7 +250,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Numero" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vtv-2A-lBa">
                                 <rect key="frame" x="55" y="293" width="304" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="phone.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="PEx-JB-1hX">
                                 <rect key="frame" x="16" y="300" width="20" height="19"/>
@@ -278,6 +278,9 @@
                                 <rect key="frame" x="55" y="419" width="304" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                <connections>
+                                    <outlet property="delegate" destination="j36-Zq-8MD" id="7bX-Vb-3Wu"/>
+                                </connections>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="rectangle.stack.person.crop.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UDQ-a7-1GU">
                                 <rect key="frame" x="16" y="383.5" width="22" height="21"/>
@@ -292,12 +295,23 @@
                                     <outlet property="delegate" destination="j36-Zq-8MD" id="oTc-zx-cXr"/>
                                 </connections>
                             </pickerView>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dgp-Bl-Ug4">
+                                <rect key="frame" x="0.0" y="501" width="375" height="144"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="144" id="MpY-HC-6V9"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="j36-Zq-8MD" id="vsq-Ex-hy3"/>
+                                    <outlet property="delegate" destination="j36-Zq-8MD" id="gsY-rM-xMU"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="9pZ-eW-7gX" firstAttribute="leading" secondItem="C18-Yc-0Gh" secondAttribute="trailing" constant="19" id="0AW-cw-2Hm"/>
                             <constraint firstItem="N1T-OK-FMD" firstAttribute="trailing" secondItem="vtv-2A-lBa" secondAttribute="trailing" constant="16" id="1oV-RN-BOs"/>
                             <constraint firstItem="ksx-XB-Tkd" firstAttribute="centerY" secondItem="QXH-ob-ssM" secondAttribute="centerY" constant="70.5" id="1tW-5b-lH9"/>
+                            <constraint firstItem="Dgp-Bl-Ug4" firstAttribute="centerY" secondItem="QXH-ob-ssM" secondAttribute="centerY" constant="249.5" id="2Dc-HA-QkR"/>
                             <constraint firstItem="9IC-yf-TKt" firstAttribute="centerX" secondItem="QXH-ob-ssM" secondAttribute="centerX" constant="-98.5" id="3Xm-Du-VW5"/>
                             <constraint firstItem="eoR-WG-Smn" firstAttribute="leading" secondItem="skD-H0-NJd" secondAttribute="trailing" constant="13" id="4BE-uU-KnW"/>
                             <constraint firstItem="C18-Yc-0Gh" firstAttribute="leading" secondItem="N1T-OK-FMD" secondAttribute="leading" constant="16" id="4dd-I5-XVn"/>
@@ -321,19 +335,23 @@
                             <constraint firstItem="PEx-JB-1hX" firstAttribute="leading" secondItem="N1T-OK-FMD" secondAttribute="leading" constant="16" id="NR1-KM-Hvz"/>
                             <constraint firstItem="Q0T-Uj-GDJ" firstAttribute="centerX" secondItem="QXH-ob-ssM" secondAttribute="centerX" constant="124" id="PFC-7u-vXt"/>
                             <constraint firstItem="sF1-qp-iD3" firstAttribute="leading" secondItem="UGU-d7-Zrs" secondAttribute="trailing" constant="19" id="T81-WQ-XOI"/>
+                            <constraint firstItem="Dgp-Bl-Ug4" firstAttribute="trailing" secondItem="N1T-OK-FMD" secondAttribute="trailing" id="TuL-av-Nb6"/>
                             <constraint firstItem="Tna-5z-Jrq" firstAttribute="centerY" secondItem="QXH-ob-ssM" secondAttribute="centerY" constant="-56.5" id="UM8-QX-8ko"/>
                             <constraint firstItem="dOe-hj-MNL" firstAttribute="leading" secondItem="N1T-OK-FMD" secondAttribute="leading" id="VWO-dX-DkB"/>
                             <constraint firstItem="eoR-WG-Smn" firstAttribute="centerX" secondItem="QXH-ob-ssM" secondAttribute="centerX" constant="19.5" id="Wb7-yc-UBI"/>
                             <constraint firstItem="N1T-OK-FMD" firstAttribute="trailing" secondItem="ksx-XB-Tkd" secondAttribute="trailing" constant="16" id="aYD-34-RDY"/>
                             <constraint firstItem="vtv-2A-lBa" firstAttribute="leading" secondItem="PEx-JB-1hX" secondAttribute="trailing" constant="19" id="bnV-1C-TPe"/>
                             <constraint firstItem="UDQ-a7-1GU" firstAttribute="centerY" secondItem="QXH-ob-ssM" secondAttribute="centerY" constant="71" id="deY-i9-h8C"/>
+                            <constraint firstItem="Dgp-Bl-Ug4" firstAttribute="leading" secondItem="N1T-OK-FMD" secondAttribute="leading" id="dl1-Tb-8nJ"/>
                             <constraint firstItem="sF1-qp-iD3" firstAttribute="centerX" secondItem="QXH-ob-ssM" secondAttribute="centerX" constant="19.5" id="dlj-1y-dBv"/>
                             <constraint firstItem="N1T-OK-FMD" firstAttribute="trailing" secondItem="d0Z-yX-rFp" secondAttribute="trailing" constant="16" id="eAz-mX-mdc"/>
                             <constraint firstItem="d0Z-yX-rFp" firstAttribute="centerY" secondItem="QXH-ob-ssM" secondAttribute="centerY" constant="-55.5" id="eb4-4R-Idc"/>
                             <constraint firstItem="sF1-qp-iD3" firstAttribute="centerY" secondItem="QXH-ob-ssM" secondAttribute="centerY" constant="-97.5" id="ezL-fX-yuY"/>
+                            <constraint firstItem="N1T-OK-FMD" firstAttribute="bottom" secondItem="Dgp-Bl-Ug4" secondAttribute="bottom" constant="2" id="fkv-Uc-EJo"/>
                             <constraint firstItem="d0Z-yX-rFp" firstAttribute="leading" secondItem="Tna-5z-Jrq" secondAttribute="trailing" constant="19" id="gUX-ds-8Kx"/>
                             <constraint firstItem="Q0T-Uj-GDJ" firstAttribute="centerX" secondItem="QXH-ob-ssM" secondAttribute="centerX" constant="124" id="hRa-zH-QqJ"/>
                             <constraint firstItem="N1T-OK-FMD" firstAttribute="trailing" secondItem="sF1-qp-iD3" secondAttribute="trailing" constant="16" id="iSz-FF-8OJ"/>
+                            <constraint firstItem="Dgp-Bl-Ug4" firstAttribute="centerX" secondItem="QXH-ob-ssM" secondAttribute="centerX" id="jFB-Yq-EOR"/>
                             <constraint firstItem="dOe-hj-MNL" firstAttribute="bottom" secondItem="N1T-OK-FMD" secondAttribute="bottom" id="kp5-uA-wUQ"/>
                             <constraint firstItem="dOe-hj-MNL" firstAttribute="centerX" secondItem="QXH-ob-ssM" secondAttribute="centerX" id="mMn-Ex-NIA"/>
                             <constraint firstItem="dOe-hj-MNL" firstAttribute="trailing" secondItem="N1T-OK-FMD" secondAttribute="trailing" id="sja-Ep-e5v"/>
@@ -351,10 +369,12 @@
                     <navigationItem key="navigationItem" id="uWF-J3-F7V"/>
                     <connections>
                         <outlet property="InputFamil" destination="ksx-XB-Tkd" id="0Dw-0F-boJ"/>
+                        <outlet property="InputGroup" destination="eoR-WG-Smn" id="ptR-yX-Xle"/>
                         <outlet property="Relationfamilial" destination="ksx-XB-Tkd" id="GRv-h1-uc0"/>
                         <outlet property="SelectRelation" destination="dOe-hj-MNL" id="Hbj-gc-w85"/>
                         <outlet property="image" destination="UD9-pk-BhG" id="pe0-6F-8hc"/>
                         <outlet property="picker" destination="dOe-hj-MNL" id="hqe-5p-fua"/>
+                        <outlet property="pickerGroup" destination="Dgp-Bl-Ug4" id="psB-kh-njG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6SR-bk-BD5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -363,7 +383,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="IMG_20191116_133850.jpg" width="3024" height="4032"/>
         <image name="camera" catalog="system" width="64" height="48"/>
         <image name="camera.circle.fill" catalog="system" width="64" height="60"/>
         <image name="envelope.circle.fill" catalog="system" width="64" height="60"/>

@@ -1,0 +1,6 @@
+framework module Pods_carnetContactTests {
+  umbrella header "Pods-carnetContactTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

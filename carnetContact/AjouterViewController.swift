@@ -34,7 +34,7 @@ class AjouterViewController: UIViewController, UIImagePickerControllerDelegate, 
 
     
   @IBAction func SaveContact(_ sender: UIButton) {
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let context = appDelegate.persistentContainer.viewContext
     
     let newContact = NSEntityDescription.insertNewObject(forEntityName: "Contacts", into: context)
@@ -68,6 +68,9 @@ class AjouterViewController: UIViewController, UIImagePickerControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
+        image.layer.masksToBounds = false
+        image.layer.cornerRadius = image.frame.height/2
+        image.clipsToBounds = true
         
         picker.delegate = self
         picker.dataSource = self

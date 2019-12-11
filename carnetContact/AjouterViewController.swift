@@ -13,6 +13,7 @@ class AjouterViewController: UIViewController, UIImagePickerControllerDelegate, 
  
     var family: [String] = [String]()
     var group: [String] = [String]()
+    var photo : String?
     
     @IBOutlet weak var InputFamil: UITextField!
     @IBOutlet weak var picker: UIPickerView!
@@ -30,9 +31,6 @@ class AjouterViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var Relation: UITextField!
     @IBOutlet weak var Group: UITextField!
     
-    
-
-    
   @IBAction func SaveContact(_ sender: UIButton) {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let context = appDelegate.persistentContainer.viewContext
@@ -40,15 +38,17 @@ class AjouterViewController: UIViewController, UIImagePickerControllerDelegate, 
     let newContact = NSEntityDescription.insertNewObject(forEntityName: "Contacts", into: context)
     newContact.setValue(Nom.text, forKey: "nom")
     newContact.setValue(Prenom.text, forKey: "prenom")
-    newContact.setValue(Numero.text, forKey: "numero")
+    newContact.setValue(Int(Numero.text!), forKey: "numero")
     newContact.setValue(Mail.text, forKey: "mail")
     newContact.setValue(Relation.text, forKey: "relation")
     newContact.setValue(Group.text, forKey: "group")
     newContact.setValue(Date(), forKey: "date_registre")
-    
+    newContact.setValue(photo, forKey: "photo")
+    print("\(String(describing: photo))")
     do{
         try context.save()
         print("Operation succesful")
+         self.dismiss(animated: true, completion: nil)
     } catch {
         print ("Operation failed")
     }
@@ -151,11 +151,23 @@ class AjouterViewController: UIViewController, UIImagePickerControllerDelegate, 
         if let selectedPicture: UIImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             image.image = selectedPicture
             if(imagePicker.sourceType == .camera){
-                UIImageWriteToSavedPhotosAlbum(selectedPicture, nil, nil, nil)
+                
+                let fileManager = FileManager.default
+                let documentPath = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first
+                let imagePath = documentPath?.appendingPathComponent("\(Date()).jpg")
+                
+                if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+                    let imageData = pickedImage.jpegData(compressionQuality: 0.75)
+                    try! imageData?.write(to: imagePath!)
+                    photo = "\(String(describing: imagePath))"
+                    
+                }
             }
         }
         imagePicker.dismiss(animated: true, completion: nil)
     }
+    
+    
     
     
     

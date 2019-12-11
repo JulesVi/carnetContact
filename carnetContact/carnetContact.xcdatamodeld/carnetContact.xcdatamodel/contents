@@ -10,6 +10,7 @@
         <attribute name="prenom" optional="YES" attributeType="String"/>
         <attribute name="relation" optional="YES" attributeType="String"/>
     </entity>
+    <fetchRequest name="ObtenirRegistres" entity="Contacts"/>
     <elements>
         <element name="Contacts" positionX="-63" positionY="-18" width="128" height="163"/>
     </elements>

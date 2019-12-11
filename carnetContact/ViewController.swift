@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreData
+
 
 // on crée ici la structure que suivra un contact
 struct Contact {
@@ -31,37 +33,36 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let test = Contact(nom: "Vial", prenom: "Jules")
-        let test1 = Contact(nom: "Perez", prenom: "Pedro")
-        let test2 = Contact(nom: "Bruel", prenom: "Patrick")
-        let test3 = Contact(nom: "Saby", prenom: "Julie")
-        let test4 = Contact(nom: "Cesar", prenom: "Jules")
-        let test5 = Contact(nom: "Bonnaire", prenom: "Jules")
-        let test6 = Contact(nom: "Pinot", prenom: "Thibaut")
-        let test7 = Contact(nom: "Alaphilippe michel jean", prenom: "Julian claude robert enguerrand jackie")
-        let test8 = Contact(nom: "Froome", prenom: "Christopher")
-        let test9 = Contact(nom: "Bardet", prenom: "Romain")
-        let test10 = Contact(nom: "Poulidor", prenom: "Raymond")
-        let test11 = Contact(nom: "Mercxk", prenom: "Eddy")
-        let test12 = Contact(nom: "Bernal", prenom: "Egan")
-        let test13 = Contact(nom: "Kristof", prenom: "Alexander")
-        ContactService.shared.add(contact: test)
-        ContactService.shared.add(contact: test1)
-        ContactService.shared.add(contact: test2)
-        ContactService.shared.add(contact: test3)
-        ContactService.shared.add(contact: test4)
-        ContactService.shared.add(contact: test5)
-        ContactService.shared.add(contact: test6)
-        ContactService.shared.add(contact: test7)
-        ContactService.shared.add(contact: test8)
-        ContactService.shared.add(contact: test9)
-        ContactService.shared.add(contact: test10)
-        ContactService.shared.add(contact: test11)
-        ContactService.shared.add(contact: test12)
-        ContactService.shared.add(contact: test13)
         ContactService.shared.sort(type: "nom")
         
         self.sections = []
+          let appDelegate = UIApplication.shared.delegate as! AppDelegate
+          let context = appDelegate.persistentContainer.viewContext
+          let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Contacts")
+        
+        request.returnsObjectsAsFaults = false
+        do{
+            let results = try context.fetch(request)
+            
+            if results.count > 0 {
+                
+                for r in results as! [NSManagedObject] {
+                    var nome = ""
+                    var prenomTemp = ""
+                    
+                    if let name = r.value(forKey: "nom") as? String {
+                        nome = name
+                    }
+                    if let pre = r.value(forKey: "prenom") as? String {
+                        prenomTemp = pre
+                    }
+                    ContactService.shared.add(contact: Contact(nom: nome, prenom: prenomTemp))
+                }
+            }
+        }catch{
+            
+        }
+        
         for contact in ContactService.shared.contacts {
             let firstLetter = String(describing: contact.nom.first)
             if filteredContact[firstLetter] != nil {

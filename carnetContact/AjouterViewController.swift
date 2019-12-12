@@ -93,10 +93,13 @@ class AjouterViewController: UIViewController, UIImagePickerControllerDelegate, 
         return donnee
      }
     
-    func pickerView(_pickerView:UIPickerView, titleForRow row:Int, forComponent component: Int)-> String? {
-        if _pickerView == picker {
+//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        <#code#>
+//    }
+    func pickerView(_ pickerView:UIPickerView, titleForRow row:Int, forComponent component: Int)-> String? {
+        if pickerView == picker {
             return family[row]
-        } else if _pickerView == pickerGroup{
+        } else if pickerView == pickerGroup{
             return group[row]
         }
         return ""

@@ -86,6 +86,10 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
     }
     
+    @IBAction func changement() {
+        loadDatas()
+    }
+    
     // gestion du type de tri en fonction du segmented control
     @IBAction func triChanged(_ sender: Any) {
         switch segmented.selectedSegmentIndex {

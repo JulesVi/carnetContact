@@ -232,6 +232,9 @@ extension ViewController: UITabBarDelegate {
             // TODO : a corriger, pas de supression dans la base
             if (segmented.selectedSegmentIndex != 2) {
                 // TODO : gerer supression
+                let alert = UIAlertController(title: "Fonctionnalité supression à venir", message: "Prochaine mise a jour le 25/12", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alert, animated: true)
             } else {
                 ContactService.shared.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .automatic)
